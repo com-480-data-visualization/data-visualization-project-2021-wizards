@@ -18,6 +18,8 @@
 
 **10% of the final grade**
 
+Please download the pdf to click on the links.
+
 [Milestone 2](https://github.com/com-480-data-visualization/data-visualization-project-2021-wizards/blob/master/milestones/Milestone_2.pdf)
 
 ## Milestone 3 (4th June, 5pm)
