@@ -6,7 +6,7 @@
 | Jouve Maxence | 269716 |
 | Jonsson Adalsteinn | 336263 |
 
-[Milestone 1](https://github.com/com-480-data-visualization/data-visualization-project-2021-wizards/blob/master/milestones/milestone1.md) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
+[Milestone 1](https://github.com/com-480-data-visualization/data-visualization-project-2021-wizards/blob/master/milestones/milestone1.md) • [Milestone 2](https://github.com/com-480-data-visualization/data-visualization-project-2021-wizards/blob/master/milestones/Milestone_2.pdf) • [Milestone 3](#milestone-3)
 
 ## Milestone 1 (23rd April, 5pm)
 
@@ -18,6 +18,7 @@
 
 **10% of the final grade**
 
+[Milestone 2](https://github.com/com-480-data-visualization/data-visualization-project-2021-wizards/blob/master/milestones/Milestone_2.pdf)
 
 ## Milestone 3 (4th June, 5pm)
 
