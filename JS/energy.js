@@ -130,9 +130,6 @@ function energy() {
         , 'Other Middle East', 'Other Asia & Pacific', 'South & Central America', 'Europe (other)', 'Other CIS',
         'Other Caribbean', 'Other Northern Africa', 'Other South America', 'Other Southern Africa', 'Western Africa']
 
-
-
-
     loadData();
 
     function calculateBoxes(data) {
@@ -192,7 +189,7 @@ function energy() {
 
     function loadData() {
         // This loads the data from the file and builds the graph
-        d3.csv("JS/electricity_emissions.csv", function (error, data) {
+        d3.csv("data/electricity_emissions.csv", function (error, data) {
             data = calculateBoxes(data);
 
             y = d3.scaleBand().rangeRound([0, height]).padding(0.3);

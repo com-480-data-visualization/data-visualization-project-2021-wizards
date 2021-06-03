@@ -48,7 +48,8 @@ dataset = {
  {'Food': 'Citrus Fruit', 'Emissions': 0.3, 'Group': 'Plant', 'Image':'lemon.png'},
  {'Food': 'Nuts', 'Emissions': 0.2, 'Group': 'Nuts', 'Image':'nuts.png'}]
 };
-const ImgPath = 'data-visualization-project-2021-wizards/imgs/'
+//const ImgPath = 'data-visualization-project-2021-wizards/imgs/'
+const ImgPath = 'imgs/'
 
 
 
