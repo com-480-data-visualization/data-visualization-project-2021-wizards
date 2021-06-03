@@ -33,7 +33,7 @@ For each visualization on our website we have a different data source.
 **Global Overview:** [Greenhouse Gas Emissions by Country](https://www.climatewatchdata.org/data-explorer/historical-emissions?historical-emissions-data-sources=71&historical-emissions-gases=246&historical-emissions-regions=All%20Selected&historical-emissions-sectors=843&page=3#data)  
 **Energy:** [Electricity source by country](https://github.com/owid/energy-data)  
 **Industry:** [Industry emissions by material](https://www.nature.com/articles/s41561-021-00690-8#MOESM3)  
-**Agriculture:**[Food Emissions](https://ourworldindata.org/food-choice-vs-eating-local)  
+**Agriculture:** [Food Emissions](https://ourworldindata.org/food-choice-vs-eating-local)  
 **Transport:** [Transporation emissions](https://www.iea.org/data-and-statistics/charts/transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030)  
 
 ## Milestones
