@@ -41,7 +41,6 @@ function transportation() {
             .attr('width', function (d) { return d.x1 - d.x0; })
             .attr('height', function (d) { return d.y1 - d.y0; })
             .style("fill", function(d){
-                console.log(d)
                 return color(d.data.name)} )
 
         svg.selectAll("text")

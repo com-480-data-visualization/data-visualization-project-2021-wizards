@@ -339,7 +339,7 @@ function energy() {
         x.domain([min_val.toFixed(0), max_val.toFixed(0)]);
 
         y.domain(data.map(d => {
-            return d.Entity;
+            return d['Entity'];
         }));
         svg = svg.append("g");
         d3.selectAll(".bar").remove();
@@ -361,7 +361,7 @@ function energy() {
             .data(data)
             .enter().append("g")
             .attr("transform", d => {
-                return "translate(0," + y(d.Entity) + ")";
+                return "translate(0," + y(d['Entity']) + ")";
             })
             .attr("class", d => {
                 return d.boxes[0].country + " bar"

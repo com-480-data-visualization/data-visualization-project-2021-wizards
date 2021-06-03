@@ -14,7 +14,6 @@ function industry() {
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-// d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/5_OneCatSevNumOrdered_wide.csv", function(data) {
   d3.csv("data/industry.csv", function(data) {
 
     // List of groups = header of the csv files
@@ -68,7 +67,7 @@ function industry() {
     svg.call(tip);
 
     // Three function that change the tooltip when user hover / move / leave a cell
-    const mouseover = function(d) {
+    const mouseover = function() {
       d3.selectAll(".myArea").style("opacity", .2)
       d3.select(this)
           .style("stroke", "black")

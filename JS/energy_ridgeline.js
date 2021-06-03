@@ -1,6 +1,6 @@
 function energy_ridgeline(country) {
+    // This file is not used by the site currently. We decided to take it out as it cluttered the energy graph too much
     // set the dimensions and margins of the graph
-    // This ridgeline graph is currently not used as it doesn't look too good.
     var margin = {
             top: 70,
             right: 10,
@@ -9,9 +9,6 @@ function energy_ridgeline(country) {
         },
         width = 560 - margin.left - margin.right,
         height = 600 - margin.top - margin.bottom;
-    // var margin = { top: 30, right: 10, bottom: 30, left: 300 },
-    //     width = 700 - margin.left - margin.right,
-    //     height = 600 - margin.top - margin.bottom;
 
     let overlap = 0.8;
 
@@ -84,15 +81,10 @@ function energy_ridgeline(country) {
                 });
             })
         })
-        console.log("My dataflat is:", dataFlat);
-        console.log("My dataflat is:", typeof dataFlat);
 
         data = d3.nest()
             .key(function(d) { return d.source; })
             .entries(dataFlat);
-
-
-        console.log("My data is:", data);
 
         xScale.domain(d3.extent(dataFlat, x));
 

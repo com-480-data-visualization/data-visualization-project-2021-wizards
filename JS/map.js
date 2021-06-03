@@ -4,10 +4,13 @@ function displayMap() {
   // We then added all the additional functionalities (click, slider) to make it
   // interactive
 
+  let currentCountryHTML, currentCountryID, svg_barChart, y_barChart, yaxis_barChart, stackedData, prev_height,
+  totalEmissionPerSector;
+
   d3.json("data/world_countries.json", function(error1, map_data) {
     d3.json("data/emissions_full_dataset.json", function(error2, emissions_data) {
 
-      nameById = {}
+      let nameById = {}
 
       map_data.features.map(x => {
         nameById[x.id] = x.properties.name
@@ -314,14 +317,13 @@ function displayMap() {
       document.getElementById("countryName").innerHTML = countryName
       document.getElementById("countryEmission").innerHTML = countryData.total.toFixed(2) + " MtCo2e"
 
-      var margin = {top: 50, right: 50, bottom: 50, left: 50},
-      width = 300 - margin.left - margin.right,
+      let margin = {top: 50, right: 50, bottom: 50, left: 50},
       height = 500 - margin.top - margin.bottom;
 
-      var total = countryData.total
+      let total = countryData.total
 
-      var lowerRange = 0
-      var upperRange = 100
+      let lowerRange = 0
+      let upperRange = 100
 
       if (total < 0) {
         total = -total
@@ -329,7 +331,7 @@ function displayMap() {
 
       const energy_per = countryData.energy / total * 100
       const industry_per = countryData.industry / total * 100
-      var agriculture_per = countryData.agriculture / total * 100
+      let agriculture_per = countryData.agriculture / total * 100
       const transport_per = countryData.transport / total * 100
       const other_per = countryData.other / total * 100
 
@@ -384,7 +386,7 @@ function displayMap() {
 
       // append the svg object to the body of the page
       // set the dimensions and margins of the graph
-      var margin = {top: 50, right: 0, bottom: 50, left: 50},
+      let margin = {top: 50, right: 0, bottom: 50, left: 50},
       width = 300 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
@@ -419,7 +421,7 @@ function displayMap() {
         ];
 
 
-        var colors = ['#4daf4a', '#abc4ff', '#023e8a', '#495057', '#fca311'].reverse()
+        let colors = ['#4daf4a', '#abc4ff', '#023e8a', '#495057', '#fca311'].reverse()
 
         y_barChart = d3.scaleLinear()
         .domain([0, 100])
@@ -427,15 +429,14 @@ function displayMap() {
         yaxis_barChart.call(d3.axisLeft(y_barChart));
 
         // create a tooltip
-        var Tooltip = d3.select(".mapLeft").select("#sectorChart")
+        let Tooltip = d3.select(".mapLeft").select("#sectorChart")
         .append("div")
         .style("opacity", 0)
         .attr("class", "d3-tip")
         .style("width", "150px")
         .style("background-color", "white")
 
-        var rects = svg_barChart.selectAll("rect").data(stackedData)
-
+        let rects = svg_barChart.selectAll("rect").data(stackedData)
 
         rects
         .enter()
