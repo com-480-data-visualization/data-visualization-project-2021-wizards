@@ -119,7 +119,7 @@ function energy() {
     let tip = d3.tip().attr('class', 'd3-tip').html(d => {
         return `<strong>${d.country}: </strong><span class='capitalize details'>${d.name}<br/></span>
                 <strong>Relative: </strong> <span class='details'>${(d.relative).toFixed(1)} % <br/></span>
-                <strong>absolute: </strong> <span class='details'>${(d.absolute).toFixed(2)} MtCo2e</span>`
+                <strong>absolute: </strong> <span class='details'>${(d.absolute).toFixed(2)} TWh</span>`
     });
     svg.call(tip);
 
