@@ -4,8 +4,8 @@ function displayMap() {
   // We then added all the additional functionalities (click, slider) to make it
   // interactive
 
-  d3.json("JS/world_countries.json", function(error1, map_data) {
-    d3.json("JS/emissions_full_dataset.json", function(error2, emissions_data) {
+  d3.json("data/world_countries.json", function(error1, map_data) {
+    d3.json("data/emissions_full_dataset.json", function(error2, emissions_data) {
 
       nameById = {}
 

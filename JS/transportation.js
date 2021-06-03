@@ -15,7 +15,7 @@ function transportation() {
             "translate(" + margin.left + "," + margin.top + ")");
 
 // read json data
-    d3.json("JS/transport.json", function(data) {
+    d3.json("data/transport.json", function(data) {
 
         // Give the data to this cluster layout:
         var root = d3.hierarchy(data).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
@@ -68,7 +68,7 @@ function transportation() {
 
 
             .append("text")
-            .attr("x", function(d){ 
+            .attr("x", function(d){
                 if (d.data.pourcentage == "44.99%") {
                     return d.x0+170
                 }
@@ -78,11 +78,11 @@ function transportation() {
                 if (d.data.pourcentage == "11.57%") {
                     return d.x0+40
                 }
-            
+
                 if (d.data.pourcentage == "10.59%") {
                     return d.x0+40
                 }
-            
+
                 if (d.data.pourcentage == "0.96%") {
                     return d.x0+2
                 }
@@ -90,13 +90,13 @@ function transportation() {
                 if (d.data.pourcentage == "2.14%") {
                     return d.x0+30
                 }
-            
-            
-            
+
+
+
             })    // +10 to adjust position (more right)
             //.attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
-            //.attr("y", function(d){ return d.y0+50}) 
-            .attr("y", function(d){ 
+            //.attr("y", function(d){ return d.y0+50})
+            .attr("y", function(d){
                 if (d.data.pourcentage == "44.99%") {
                     return d.y0+150
                 }
@@ -106,11 +106,11 @@ function transportation() {
                 if (d.data.pourcentage == "11.57%") {
                     return d.y0+120
                 }
-            
+
                 if (d.data.pourcentage == "10.59%") {
                     return d.y0+100
                 }
-            
+
                 if (d.data.pourcentage == "0.96%") {
                     return d.y0+35
                 }
@@ -118,7 +118,7 @@ function transportation() {
                 if (d.data.pourcentage == "2.14%") {
                     return d.y0+35
                 }
-            
+
           })    // +20 to adjust position (lower)
             .text(function(d){ return d.data.pourcentage})
             //.text(["45%", "29.7%", "11.575%", "10.5%", "0.9617%", "2.148%"])
@@ -168,7 +168,7 @@ function transportation() {
             .attr('height', 40)
             .attr("x", 540)
             .attr("y",325);
-        
+
         var pipeLineImg = svg.append('image')
             .attr('xlink:href', "imgs/clog.svg")
             .attr('width', 40)
@@ -259,7 +259,7 @@ function transportation() {
                     .data(root.leaves())
                     .enter()
 
-                    
+
 
                     .append("text")
                     .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
