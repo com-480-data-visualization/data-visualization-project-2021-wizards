@@ -19,7 +19,6 @@ function energy() {
     let lastSortKey = 'Entity';
     const xAxis = d3.axisTop(x);
     let yAxis = d3.axisLeft(y);
-    let headerMarginleft = 200;
 
     let headerSvg = d3.select('#energyHeader')
         .append("svg")
@@ -308,7 +307,7 @@ function energy() {
         if (!isAbsolute && sortKey !== 'Entity') {
             sortKey = sortKey + 'Percentage'
         }
-        ;
+
         if (sortKey === 'Entity') {
             ascending = true;
         }
