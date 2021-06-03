@@ -1,17 +1,22 @@
+/*------------------- General Structure -------------------*/
 body {
-    font-family: "Helvetica";
+    font-family: "Helvetica", sans-serif;
 }
 
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px;
+a {
+  color: black;
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, .5);
-  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+    display: flex;
 }
 
 .image {
@@ -25,39 +30,6 @@ body {
     margin-right: 6%;
 }
 
-.flex70{
-    flex: 70%;
-    margin-left: 6%;
-    margin-right: 6%;
-}
-
-.flex30{
-    flex:30%;
-    margin-left: 6%;
-    margin-right: 6%;
-}
-
-.height70{
-    height: 70vh;
-}
-.height60{
-    height: 60vh;
-}
-
-.spaceBetween{
-    justify-content: space-between;
-}
-
-.padding10{
-    padding: 10px;
-}
-
-.scrollable {
-    margin-right: 0;
-    overflow-y: scroll;
-    overflow: -moz-scrollbars-vertical;
-}
-
 .lessRight {
     margin-right: 3%;
 }
@@ -66,15 +38,38 @@ body {
     margin-left: 3%;
 }
 
-.columnsImage {
-    width: 20%;
-    height: auto;
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.lightGray {
-    background-color: #F5F5F5;
+.textBlock {
+    font-size: 20px;
+    word-spacing:-2px;
+    display: table-row;
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+    height: 80%;
 }
 
+.textBlock > span {
+    display: block;
+}
+
+/*------------------- INTRODUCTION -------------------*/
+.planetImage {
+    vertical-align: middle;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    margin: auto;
+}
+
+
+/*------------------- GLOBAL OVERVIEW -------------------*/
 .mapLeft {
     flex: 10%;
     display: table-row;
@@ -88,95 +83,28 @@ body {
     flex:75%
 }
 
-.right {
-    vertical-align: middle;
-    margin-left: 0;
-    vertical-align: middle;
-    margin-bottom: 10%;
-}
-
-.planetImage {
-    vertical-align: middle;
-    display: flex;
-    width: 80%;
-    height: 80%;
-    justify-content: center;
-    margin: auto;
-
-}
-
-p {
-    text-align: justify;
-    display: table-row;
-    text-align-last: justify;
-    font-family: "Helvetica";
-}
-
-a {
-  color: black;
-}
-
-.textblock {
-    font-size: 20px;
-    /* text-align: justify; */
-    word-spacing:-2px;
-    display: table-row;
-    /* text-align-last: justify; */
-    text-align: justify;
-    text-justify: distribute;
-    text-align-last: left;
-    font-family: "Helvetica";
-    height: 80%;
-
-}
-
-.textblock > span {
-  display: block;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    font-family: "Helvetica";
-}
-
 #countryData {
-  padding: 0px;
-  margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
-#countryData > p {
-  padding: 0px;
-  margin: 0px;
+#countryData > span {
+    padding: 0;
+    margin: 0;
 }
 
 #slider-time {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #mapChart {
-  height: 70vh;
+    height: 70vh;
 }
 
 #legends {
-  height: 10vh;
+    height: 10vh;
 }
-
-section {
-    height: 100%;
-    width: 100%;
-    display: flex;
-}
-
-/* GLOBAL OVERVIEW */
 
 .click_me_left {
   position:absolute;
@@ -185,15 +113,22 @@ section {
   right: 23%;
 }
 
-
-/* ENERGY PART */
-
+/*------------------- ENERGY -------------------*/
 .energy_title {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 #energy_section strong {
   color: #fca311;
+}
+
+.height60{
+    height: 60vh;
+}
+
+.scrollable {
+    margin-right: 0;
+    overflow-y: scroll;
 }
 
 .lightbulbImage {
@@ -209,10 +144,7 @@ section {
 }
 
 .buttons-energy > button {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 50px;
-  margin-bottom: 0px;
+    margin: 50px 50px 0;
 }
 
 .buttons-energy .textButton {
@@ -235,7 +167,7 @@ section {
   justify-content: center;
   margin: auto;
   width: 85%;
-  padding: 0px
+  padding: 0
 }
 
 .click_me_right {
@@ -243,9 +175,21 @@ section {
   margin-left: 47%;
 }
 
+/* enables scrollbar to show consistently, also on mac */
 
-/* INDUSTRY PART */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
 
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+/*------------------- INDUSTRY -------------------*/
 #industryviw {
   width: 40%;
   height: 50%;
@@ -260,10 +204,14 @@ section {
 }
 
 
-/* AGRICULTURE PART */
+/*------------------- AGRICULTURE -------------------*/
+.columnsImage {
+    width: 20%;
+    height: auto;
+}
 
 .agriculture_title {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 #agriculture_section strong {
@@ -306,8 +254,7 @@ section {
   background-color: #6a994e;
 }
 
-/* TRANSPORT PART */
-
+/*------------------- TRANSPORT -------------------*/
 #transportation_section strong {
   color: #023e8a;
 }
@@ -319,13 +266,23 @@ section {
   right:45%;
 }
 
-/* References */
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topPadding20{
+    padding-top: 20px;
+}
+
+/*------------------- REFERENCES -------------------*/
 
 .references {
     font-size: 20px;
     display: table-row;
     text-align: left;
-    font-family: "Helvetica";
     height: 80%;
 }
 
@@ -334,7 +291,7 @@ section {
 }
 
 
-/* Fullpage js styling */
+/*------------------- FULLPAGE.JS STYLING -------------------*/
 
 .fp-controlArrow {
     position: absolute;
@@ -378,110 +335,7 @@ section {
     cursor: pointer;
 }
 
-
-/*----------------------  D3 JS MAP ------------------------------*/
-
-
-.names {
-    stroke: #fff;
-    stroke-linejoin: round;
-}
-
-/* Tooltip CSS */
-.d3-tip {
-    line-height: 1.5;
-    font-weight: 400;
-    font-family:"avenir next", Helvetica, sans-serif;
-    padding: 6px;
-    background: white;
-    color: #a7c957;
-    border-radius: 1px;
-    pointer-events: none;
-    position:absolute;
-    z-index: 100000;
-    border: solid;
-    border-width: 2px;
-    border-radius: 5px;
-}
-
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-    box-sizing: border-box;
-    display: inline;
-    font-size: 8px;
-    width: 100%;
-    line-height: 1.5;
-    color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    pointer-events: none;
-
-}
-
-/* Northward tooltips */
-.d3-tip.n:after {
-    content: "\25BC";
-    margin: -1px 0 0 0;
-    top: 100%;
-    left: 0;
-    text-align: center;
-}
-
-/* Eastward tooltips */
-.d3-tip.e:after {
-    content: "\25C0";
-    margin: -4px 0 0 0;
-    top: 50%;
-    left: -8px;
-}
-
-/* Southward tooltips */
-.d3-tip.s:after {
-    content: "\25B2";
-    margin: 0 0 1px 0;
-    top: -8px;
-    left: 0;
-    text-align: center;
-}
-
-/* Westward tooltips */
-.d3-tip.w:after {
-    content: "\25B6";
-    margin: -4px 0 0 -1px;
-    top: 50%;
-    left: 100%;
-}
-
-text{
-    pointer-events:none;
-}
-
-.details{
-    color: black;
-}
-
-.whiteText{
-    color: white;
-}
-
-.capitalize {
-    text-transform: capitalize;
-}
-
-.linearGradient {
-    background-image: linear-gradient(red, yellow);
-}
-
-.center{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.topPadding20{
-    padding-top: 20px;
-}
-
+/*------------------- BUTTONS -------------------*/
 .button {
   display: inline-block;
   padding: 15px 25px;
@@ -548,6 +402,85 @@ text{
     transform: translateY(4px);
 }
 
-.margin140{
-    margin-left: 140px;
+/*------------------- TOOLTIPS -------------------*/
+text{
+    pointer-events:none;
 }
+
+.details{
+    color: black;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.names {
+    stroke: #fff;
+    stroke-linejoin: round;
+}
+
+.d3-tip {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family:"avenir next", Helvetica, sans-serif;
+    padding: 6px;
+    background: white;
+    color: #a7c957;
+    pointer-events: none;
+    position:absolute;
+    z-index: 100000;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 8px;
+    width: 100%;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    pointer-events: none;
+
+}
+
+/* Northward tooltips */
+.d3-tip.n:after {
+    content: "\25BC";
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+    text-align: center;
+}
+
+/* Eastward tooltips */
+.d3-tip.e:after {
+    content: "\25C0";
+    margin: -4px 0 0 0;
+    top: 50%;
+    left: -8px;
+}
+
+/* Southward tooltips */
+.d3-tip.s:after {
+    content: "\25B2";
+    margin: 0 0 1px 0;
+    top: -8px;
+    left: 0;
+    text-align: center;
+}
+
+/* Westward tooltips */
+.d3-tip.w:after {
+    content: "\25B6";
+    margin: -4px 0 0 -1px;
+    top: 50%;
+    left: 100%;
+}
+
+
+

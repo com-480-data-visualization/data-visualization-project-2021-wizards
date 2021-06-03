@@ -168,7 +168,7 @@ function displayMap() {
       .tickValues(dataTime)
       .default(new Date(2017, 10, 3))
       .on('end', (val) => {
-        d3.select('p#value-time').text(d3.timeFormat('%Y')(val));
+        d3.select('#value-time').text(d3.timeFormat('%Y')(val));
         const year = d3.timeFormat('%Y')(val)
         ready(year)
       });
@@ -182,7 +182,7 @@ function displayMap() {
 
       gTime.call(sliderTime);
 
-      d3.select('p#value-time').text(d3.timeFormat('%Y')(sliderTime.value()));
+      d3.select('#value-time').text(d3.timeFormat('%Y')(sliderTime.value()));
 
 
       ready("2017")
