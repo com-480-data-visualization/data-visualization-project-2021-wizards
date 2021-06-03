@@ -1,0 +1,553 @@
+body {
+    font-family: "Helvetica";
+}
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.item {
+    flex: 50%;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.flex70{
+    flex: 70%;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.flex30{
+    flex:30%;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.height70{
+    height: 70vh;
+}
+.height60{
+    height: 60vh;
+}
+
+.spaceBetween{
+    justify-content: space-between;
+}
+
+.padding10{
+    padding: 10px;
+}
+
+.scrollable {
+    margin-right: 0;
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-vertical;
+}
+
+.lessRight {
+    margin-right: 3%;
+}
+
+.lessLeft {
+    margin-left: 3%;
+}
+
+.columnsImage {
+    width: 20%;
+    height: auto;
+}
+
+.lightGray {
+    background-color: #F5F5F5;
+}
+
+.mapLeft {
+    flex: 10%;
+    display: table-row;
+    height: 70vh;
+    padding-left: 4%;
+    margin-top: 4%;
+}
+
+.mapRight {
+    margin-left: -5%;
+    flex:75%
+}
+
+.right {
+    vertical-align: middle;
+    margin-left: 0;
+    vertical-align: middle;
+    margin-bottom: 10%;
+}
+
+.planetImage {
+    vertical-align: middle;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    margin: auto;
+
+}
+
+p {
+    text-align: justify;
+    display: table-row;
+    text-align-last: justify;
+    font-family: "Helvetica";
+}
+
+a {
+  color: black;
+}
+
+.textblock {
+    font-size: 20px;
+    /* text-align: justify; */
+    word-spacing:-2px;
+    display: table-row;
+    /* text-align-last: justify; */
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+    font-family: "Helvetica";
+    height: 80%;
+
+}
+
+.textblock > span {
+  display: block;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: "Helvetica";
+}
+
+#countryData {
+  padding: 0px;
+  margin: 0px;
+}
+
+#countryData > p {
+  padding: 0px;
+  margin: 0px;
+}
+
+#slider-time {
+  display: flex;
+  justify-content: center;
+}
+
+#mapChart {
+  height: 70vh;
+}
+
+#legends {
+  height: 10vh;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+/* GLOBAL OVERVIEW */
+
+.click_me_left {
+  position:absolute;
+  height: 6%;
+  top: 15%;
+  right: 23%;
+}
+
+
+/* ENERGY PART */
+
+.energy_title {
+  margin-top: 0px;
+}
+
+#energy_section strong {
+  color: #fca311;
+}
+
+.lightbulbImage {
+    width: 42%;
+    margin-right: 6%;
+    height: 40%;
+}
+
+.buttons-energy {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.buttons-energy > button {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.buttons-energy .textButton {
+  background-color: #fca311;
+}
+
+.buttons-energy .textButton:hover {
+  background-color: #f3722c;
+}
+
+
+#energyHeader {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#energyChart {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 85%;
+  padding: 0px
+}
+
+.click_me_right {
+  height: 6%;
+  margin-left: 47%;
+}
+
+
+/* INDUSTRY PART */
+
+#industryviw {
+  width: 40%;
+  height: 50%;
+}
+
+#industry_section strong {
+  color: #495057;
+}
+
+.industryTooltip {
+    margin-left: 190px;
+}
+
+
+/* AGRICULTURE PART */
+
+.agriculture_title {
+  margin-top: 0px;
+}
+
+#agriculture_section strong {
+  color: #4daf4a;
+}
+
+
+#agriculture_plot {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-agriculture {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.buttons-agriculture > a {
+  margin: 50px;
+}
+
+
+.buttons-agriculture .button {
+  background-color: #a7c957;
+
+}
+
+.buttons-agriculture .button.active {
+  background-color: #6a994e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.buttons-agriculture .button:hover {
+  background-color: #a7c957;
+}
+
+.buttons-agriculture .button.active:hover {
+  background-color: #6a994e;
+}
+
+/* TRANSPORT PART */
+
+#transportation_section strong {
+  color: #023e8a;
+}
+
+.move_me {
+  position:absolute;
+  height: 6%;
+  top: 70%;
+  right:45%;
+}
+
+/* References */
+
+.references {
+    font-size: 20px;
+    display: table-row;
+    text-align: left;
+    font-family: "Helvetica";
+    height: 80%;
+}
+
+.references > span {
+  display: block;
+}
+
+
+/* Fullpage js styling */
+
+.fp-controlArrow {
+    position: absolute;
+    z-index: 4;
+    top: 68%;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -38px;
+}
+.fp-controlArrow.fp-prev {
+    left: 25px;
+    width: 0;
+    border-width: 9.75px 8.5px 9.75px 0;
+    border-color: transparent black transparent transparent;
+}
+.fp-controlArrow.fp-next {
+    right: 25px;
+    border-width: 9.75px 0 9.75px 8.5px;
+    border-color: transparent transparent transparent black;
+}
+
+/* navigation dots color */
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: black!important;
+}
+
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: 1px;
+    color: black;
+    font-size: 9px;
+    font-family: helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 100px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+
+/*----------------------  D3 JS MAP ------------------------------*/
+
+
+.names {
+    stroke: #fff;
+    stroke-linejoin: round;
+}
+
+/* Tooltip CSS */
+.d3-tip {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family:"avenir next", Helvetica, sans-serif;
+    padding: 6px;
+    background: white;
+    color: #a7c957;
+    border-radius: 1px;
+    pointer-events: none;
+    position:absolute;
+    z-index: 100000;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 8px;
+    width: 100%;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    pointer-events: none;
+
+}
+
+/* Northward tooltips */
+.d3-tip.n:after {
+    content: "\25BC";
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+    text-align: center;
+}
+
+/* Eastward tooltips */
+.d3-tip.e:after {
+    content: "\25C0";
+    margin: -4px 0 0 0;
+    top: 50%;
+    left: -8px;
+}
+
+/* Southward tooltips */
+.d3-tip.s:after {
+    content: "\25B2";
+    margin: 0 0 1px 0;
+    top: -8px;
+    left: 0;
+    text-align: center;
+}
+
+/* Westward tooltips */
+.d3-tip.w:after {
+    content: "\25B6";
+    margin: -4px 0 0 -1px;
+    top: 50%;
+    left: 100%;
+}
+
+text{
+    pointer-events:none;
+}
+
+.details{
+    color: black;
+}
+
+.whiteText{
+    color: white;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.linearGradient {
+    background-image: linear-gradient(red, yellow);
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topPadding20{
+    padding-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #023e8a;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #023e8a}
+
+.button:active {
+  background-color: #023e8a;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.textButton {
+    padding: 5px 7px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04aa6d;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px #999;
+}
+
+.textButton:hover {background-color: #3e8e41}
+
+.textButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+.secTextButton {
+    padding: 5px 7px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #6e867a;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px #999;
+}
+
+.secTextButton:hover {background-color: #3f4942
+}
+
+.secTextButton:active {
+    background-color: #2e322e;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+.margin140{
+    margin-left: 140px;
+}
