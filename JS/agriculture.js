@@ -2,7 +2,7 @@ function displayAgriculturePlot() {
   // The code for this visualization was taken from https://github.com/vlandham/bubble_chart_v4
   // We added a new dataset, pictures for each bubble and changed the position of elements when grouped by food type
 
-dataset = {
+const dataset = {
     "children": [
  {'Food': 'Beef (beef herd)', 'Emissions': 59.6, 'Group': 'Meat', 'Image':'beef.png'},
  {'Food': 'Lamb & Mutton', 'Emissions': 24.5, 'Group': 'Meat', 'Image':'lamb.png'},
@@ -60,11 +60,11 @@ const ImgPath = 'imgs/'
  */
 function bubbleChart() {
   // Constants for sizing
-  var width = 1300;
-  var height = 600;
+  const width = 1300;
+  const height = 600;
 
   // tooltip for mouseover functionality
-  var tooltip = floatingTooltip('agriculture_tooltip', 240);
+  const tooltip = floatingTooltip('agriculture_tooltip', 240);
 
   // Locations to move bubbles towards, depending
   // on which view mode is selected.
@@ -199,7 +199,7 @@ function bubbleChart() {
    * rawData is expected to be an array of data objects as provided by
    * a d3 loading function like d3.csv.
    */
-  var chart = function chart(selector, rawData) {
+  const chart = function chart(selector, rawData) {
     // convert raw data into nodes data
     nodes = createNodes(rawData);
 
@@ -215,7 +215,7 @@ function bubbleChart() {
       .data(nodes, function (d) { return d.id; });
 
 
-    var defs = svg.append("defs");
+    const defs = svg.append("defs");
     defs.selectAll(".food")
       .data(nodes)
       .enter()
@@ -241,7 +241,7 @@ function bubbleChart() {
     // Initially, their radius (r attribute) will be 0.
     // @v4 Selections are immutable, so lets capture the
     //  enter selection to apply our transtition to below.
-    var bubblesE = bubbles.enter()
+    const bubblesE = bubbles.enter()
     .append('circle')
       .classed('bubble', true)
       .attr('r', 0)
@@ -339,8 +339,8 @@ function bubbleChart() {
   function showTypeTitles() {
     // Another way to do this would be to create
     // the year texts once and then just hide them.
-    var typesData = d3.keys(typeTitleX);
-    var types = svg.selectAll('.type')
+    const typesData = d3.keys(typeTitleX);
+    const types = svg.selectAll('.type')
       .data(typesData);
 
     types.enter().append('text')
@@ -362,7 +362,7 @@ function bubbleChart() {
     d3.select(this).attr('stroke-width', '4');
 
 
-    var content = '<strong class="name">Food: </strong><span class="details">' +
+    const content = '<strong class="name">Food: </strong><span class="details">' +
                   d.food +
                   '</span><br/>' +
                   '<strong class="name">Emissions (in kg of Co2 per kg): </strong><span class="details">' +
@@ -413,7 +413,7 @@ function bubbleChart() {
  * to create a new bubble chart instance, load the data, and display it.
  */
 
-var myBubbleChart = bubbleChart();
+const myBubbleChart = bubbleChart();
 
 /*
  * Function called once data is loaded from CSV.
@@ -433,13 +433,13 @@ function setupButtons() {
       // Remove active class from all buttons
       d3.selectAll('.button').classed('active', false);
       // Find the button just clicked
-      var button = d3.select(this);
+      const button = d3.select(this);
 
       // Set it as the active button
       button.classed('active', true);
 
       // Get the id of the button
-      var buttonId = button.attr('id');
+      const buttonId = button.attr('id');
 
       // Toggle the bubble chart based on
       // the currently clicked button.
@@ -453,10 +453,10 @@ function setupButtons() {
  */
 function addCommas(nStr) {
   nStr += '';
-  var x = nStr.split('.');
-  var x1 = x[0];
-  var x2 = x.length > 1 ? '.' + x[1] : '';
-  var rgx = /(\d+)(\d{3})/;
+  const x = nStr.split('.');
+  let x1 = x[0];
+  const x2 = x.length > 1 ? '.' + x[1] : '';
+  const rgx = /(\d+)(\d{3})/;
   while (rgx.test(x1)) {
     x1 = x1.replace(rgx, '$1' + ',' + '$2');
   }
@@ -474,7 +474,7 @@ display(dataset.children)
 function floatingTooltip(tooltipId, width) {
   // Local variable to hold tooltip div for
   // manipulation in other functions.
-  var tt = d3.select('body')
+  const tt = d3.select('body')
     .append('div')
     .attr('class', 'd3-tip')
     .attr('id', tooltipId)
@@ -514,25 +514,25 @@ function floatingTooltip(tooltipId, width) {
    * based on d3 mouse event.
    */
   function updatePosition(event) {
-    var xOffset = 20;
-    var yOffset = 10;
+    const xOffset = 20;
+    const yOffset = 10;
 
-    var ttw = tt.style('width');
-    var tth = tt.style('height');
+    const ttw = tt.style('width');
+    const tth = tt.style('height');
 
-    var wscrY = window.scrollY;
-    var wscrX = window.scrollX;
+    const wscrY = window.scrollY;
+    const wscrX = window.scrollX;
 
-    var curX = (document.all) ? event.clientX + wscrX : event.pageX;
-    var curY = (document.all) ? event.clientY + wscrY : event.pageY;
-    var ttleft = ((curX - wscrX + xOffset * 2 + ttw) > window.innerWidth) ?
+    const curX = (document.all) ? event.clientX + wscrX : event.pageX;
+    const curY = (document.all) ? event.clientY + wscrY : event.pageY;
+    let ttleft = ((curX - wscrX + xOffset * 2 + ttw) > window.innerWidth) ?
                  curX - ttw - xOffset * 2 : curX + xOffset;
 
     if (ttleft < wscrX + xOffset) {
       ttleft = wscrX + xOffset;
     }
 
-    var tttop = ((curY - wscrY + yOffset * 2 + tth) > window.innerHeight) ?
+    let tttop = ((curY - wscrY + yOffset * 2 + tth) > window.innerHeight) ?
                 curY - tth - yOffset * 2 : curY + yOffset;
 
     if (tttop < wscrY + yOffset) {
