@@ -43,6 +43,7 @@ For each visualization on our website we have a different data source.
 **Milestone 3:** [Final Website](https://com-480-data-visualization.github.io/data-visualization-project-2021-wizards/#Welcome) - [Process Book](https://github.com/com-480-data-visualization/data-visualization-project-2021-wizards/blob/master/milestones/Process_Book.pdf)
 
 ## Screencast
+[![Click to watch on Youtube](https://img.youtube.com/vi/2VEgTSEcMsM/0.jpg)](https://www.youtube.com/watch?v=2VEgTSEcMsM)
 
 ## Authors
 
