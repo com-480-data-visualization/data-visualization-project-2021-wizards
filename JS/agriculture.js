@@ -365,7 +365,7 @@ function bubbleChart() {
     const content = '<strong class="name">Food: </strong><span class="details">' +
                   d.food +
                   '</span><br/>' +
-                  '<strong class="name">Emissions (in kg of CO<sub>2</sub>2 per kg): </strong><span class="details">' +
+                  '<strong class="name">Emissions (in kg of CO<sub>2</sub> per kg): </strong><span class="details">' +
                   addCommas(d.emissions) +
                   '</span><br/>' +
                   '<strong class="name">Group: </strong><span class="details">' +
