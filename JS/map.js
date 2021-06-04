@@ -74,7 +74,7 @@ function displayMap() {
 
       const legendElement = legend({
         color: color,
-        title: "Emissions MtCo2e",
+        title: "Emissions MtCO2e",
         tickSize: 0
       })
       // and then append to some element
@@ -159,26 +159,26 @@ function displayMap() {
       });
 
       var sliderTime = d3
-      .sliderHorizontal()
-      .min(d3.min(dataTime))
-      .max(d3.max(dataTime))
-      .step(1000 * 60 * 60 * 24 * 365)
-      .width(350)
-      .tickFormat(d3.timeFormat('%Y'))
-      .tickValues(dataTime)
-      .default(new Date(2017, 10, 3))
-      .on('end', (val) => {
-        d3.select('#value-time').text(d3.timeFormat('%Y')(val));
-        const year = d3.timeFormat('%Y')(val)
-        ready(year)
-      });
+          .sliderHorizontal()
+          .min(d3.min(dataTime))
+          .max(d3.max(dataTime))
+          .step(1000 * 60 * 60 * 24 * 365)
+          .width(350)
+          .tickFormat(d3.timeFormat('%Y'))
+          .tickValues(dataTime)
+          .default(new Date(2017, 10, 3))
+          .on('end', (val) => {
+            d3.select('#value-time').text(d3.timeFormat('%Y')(val));
+            const year = d3.timeFormat('%Y')(val)
+            ready(year)
+          });
 
       var gTime = d3.select('div#slider-time')
-      .append('svg')
-      .attr('width', 400)
-      .attr('height', 100)
-      .append('g')
-      .attr('transform', 'translate(30,30)');
+          .append('svg')
+          .attr('width', 400)
+          .attr('height', 100)
+          .append('g')
+          .attr('transform', 'translate(30,30)');
 
       gTime.call(sliderTime);
 
@@ -186,9 +186,6 @@ function displayMap() {
 
 
       ready("2017")
-
-
-      // -------------- Draw the map --------------
 
       ready("2017")
 
@@ -294,7 +291,7 @@ function displayMap() {
           .offset([-10, 0])
           .html(d => {
             if (d.emissions != null) {
-              return `<strong>Country: </strong><span class='details'>${d.properties.name}<br></span><strong>Emissions: </strong><span class='details'>${format(d.emissions)} MtCo2e</span>`
+              return `<strong>Country: </strong><span class='details'>${d.properties.name}<br></span><strong>Emissions: </strong><span class='details'>${format(d.emissions)} MtCO<sub>2</sub>e</span>`
             }
             else {
               return `<strong>Country: </strong><span class='details'>${d.properties.name}<br></span><strong>Emissions: </strong><span class='details'>not available</span>`
@@ -315,7 +312,7 @@ function displayMap() {
     function updateBar(year, countryName, countryData) {
 
       document.getElementById("countryName").innerHTML = countryName
-      document.getElementById("countryEmission").innerHTML = countryData.total.toFixed(2) + " MtCo2e"
+      document.getElementById("countryEmission").innerHTML = countryData.total.toFixed(2) + " MtCO<sub>2</sub>e"
 
       let margin = {top: 50, right: 50, bottom: 50, left: 50},
       height = 500 - margin.top - margin.bottom;
@@ -462,7 +459,7 @@ function displayMap() {
                 .style("opacity", 1) })
                 .on("mousemove", function(d, i) {
                   Tooltip
-                  .html("<span class='details'>" + d.toFixed(2) + " %<br>" + totalEmissionPerSector[i].toFixed(2) + " MtCo2e</span>")
+                  .html("<span class='details'>" + d.toFixed(2) + " %<br>" + totalEmissionPerSector[i].toFixed(2) + " MtCO<sub>2</sub>e</span>")
                   .style("top", (d3.event.pageY) + "px")
                   .style("left", (d3.event.pageX)+"px")
                 });
