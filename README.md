@@ -40,7 +40,7 @@ For each visualization on our website we have a different data source.
 
 **Milestone 1:** [Initial idea](https://github.com/com-480-data-visualization/data-visualization-project-2021-wizards/blob/master/milestones/milestone1.md)  
 **Milestone 2:** [Idea refined](https://github.com/com-480-data-visualization/data-visualization-project-2021-wizards/blob/master/milestones/Milestone_2.pdf) - [First prototype](https://jouvemax.github.io/prototype_dataviz/)   
-**Milestone 3:** [Final Website](https://com-480-data-visualization.github.io/data-visualization-project-2021-wizards/#Welcome) - [Final Report]()
+**Milestone 3:** [Final Website](https://com-480-data-visualization.github.io/data-visualization-project-2021-wizards/#Welcome) - [Process Book](https://github.com/com-480-data-visualization/data-visualization-project-2021-wizards/blob/master/milestones/Process_Book.pdf)
 
 ## Screencast
 
